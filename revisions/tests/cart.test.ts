@@ -37,6 +37,18 @@ describe("Cart", () => {
     expect(cart.getTotal()).toBe(20);
   });
 
+  test("should be able to update the quantity of an item in the cart to ", () => {
+    const cart = new ShoppingCartFactory();
+    const items = [{ id: 1, name: "Product 1", price: 10, quantity: 1 }];
+    cart.withProducts(items);
+    const updateItemQuantitySpy = vi.spyOn(cart, "updateItemQuantity");
+
+    cart.updateItemQuantity(1, 0);
+
+    expect(updateItemQuantitySpy).toHaveBeenCalledWith(1, 0);
+    expect(cart.getTotal()).toBe(0);
+  });
+
   test("should be able to get the total price of the cart", () => {
     const cart = new ShoppingCartFactory();
     const items = [
