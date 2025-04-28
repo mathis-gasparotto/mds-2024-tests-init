@@ -1,5 +1,5 @@
 import { describe, expect, test, vi } from "vitest";
-import { ShoppingCartFactory } from "./factories/ShoppingCart";
+import { ShoppingCartFactory } from "../factories/ShoppingCart";
 
 describe("Cart", () => {
   test("should be able to add an item to the cart", () => {

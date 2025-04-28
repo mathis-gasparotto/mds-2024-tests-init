@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { calculateShippingCost } from "../src/shipping/shipping";
+import { calculateShippingCost } from "../../src/shipping/shipping";
 
 describe("Shipping", () => {
   test("should be calculate the shipping cost for a domestic order", () => {

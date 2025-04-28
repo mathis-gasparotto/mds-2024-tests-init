@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { authenticateUser } from "../src/auth/auth";
+import { authenticateUser } from "../../src/auth/auth";
 
 describe("Auth", () => {
   test("should be able to login", () => {

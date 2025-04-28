@@ -7,7 +7,14 @@ export class CouponFactory {
       discount: 10,
       expiresAt: new Date(new Date().getTime() + 1000 * 60 * 60 * 24), // add 1 day
       minOrder: 10,
-      usageLimit: 1,
+      usageLimit: 10,
+    };
+  }
+
+  withDiscount(discount: number): Coupon {
+    return {
+      ...this.withFutureDate(),
+      discount,
     };
   }
 
@@ -17,7 +24,7 @@ export class CouponFactory {
       discount: 10,
       expiresAt: new Date(new Date().getTime() - 1000 * 60 * 60 * 24), // remove 1 day
       minOrder: 10,
-      usageLimit: 1,
+      usageLimit: 10,
     };
   }
 

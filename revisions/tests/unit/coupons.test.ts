@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
-import { ShoppingCartFactory } from "./factories/ShoppingCart";
-import { validateCoupon } from "../src/coupons/coupons";
-import { CouponFactory } from "./factories/Coupon";
+import { ShoppingCartFactory } from "../factories/ShoppingCart";
+import { validateCoupon } from "../../src/coupons/coupons";
+import { CouponFactory } from "../factories/Coupon";
 
 describe("Coupons", () => {
   test("should be check a valid coupon", () => {
